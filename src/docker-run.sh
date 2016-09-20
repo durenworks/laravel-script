@@ -9,4 +9,4 @@ export UID
 
 mkdir -p "src/node_modules"
 
-docker-compose up
+docker-compose "$@"
