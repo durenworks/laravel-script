@@ -37,7 +37,7 @@ getent group ${GROUP_NAME} || groupadd -g ${GROUP_ID} ${GROUP_NAME}
 getent passwd ${USER_NAME} || useradd -d ${HOME_DIR} -g ${GROUP_ID} -u ${USER_ID} ${USER_NAME}
 
 su ${USER_NAME} -c "cp -r /etc/skel/. ${HOME_DIR}"
-
+su ${USER_NAME} -c "echo PS1=\'${COMPOSE_PROJECT_NAME}:\\\\\\w\\\\\\\\$ \' >> ${HOME_DIR}/.bashrc"
 cd /srv/web
 
 su ${USER_NAME}
