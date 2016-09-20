@@ -8,7 +8,7 @@ trap "rm -rf $GIT_DIR $SCRIPT_DIR" 0 2 3 15
 SCRIPT=$(realpath "$0")
 CUR_DIR=$(pwd)
 
-pushd "$TMP_DIR" > /dev/null
+pushd "$GIT_DIR" > /dev/null
 git clone "https://github.com/durenworks/laravel-script.git" .
 HASH=$(git rev-parse HEAD)
 
