@@ -16,6 +16,7 @@ echo "export PS1='\h:\w\$ '" > "$BASH_RC_FILE"
 CACHE_DIR="${HOME}/.cache/docker-cache"
 DOCKER_HOME_DIR="/home/user"
 mkdir -p "${CACHE_DIR}"
+mkdir -p "src/node_modules"
 
 docker run -ti --rm \
   -v "${PROJECT_DIR}/src:/srv/web" \
